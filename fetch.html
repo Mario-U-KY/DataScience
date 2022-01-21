@@ -1,18 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<body>
-  /*<input type="button" name="" value="fetch" onclick="
-  fetch('css').then(function(response){
-    response.text().then(function(text){
-      alert(text)})})"
-      >
-  */
-  <input type="text" name="" value="fetch" onclick="
-  function callbackme(){
-    console.log('response end');
-  }
-  fetch('html').then(callbackme);
-  console.log(1);
-  console.log(2);">
-</body>
+  <body>
+    <article>
+
+    </article>
+    <input type="button" value="fetch" onclick="
+      /*
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+      */
+      //Asynchronous
+      fetch('html').then(function(response){
+        if(response.status == '404'){
+          alert('Not found')
+        }
+      });
+      console.log(1);
+      console.log(2);
+    ">
+  </body>
 </html>
