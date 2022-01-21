@@ -6,10 +6,9 @@
   </head>
   <body>
     <input type="button" name="" value="fetch" onclick="
-    function callbackme(){
+    fetch('html').then(function(){
       console.log('response end');
-    }
-    fetch('html').then(callbackme);
+    });
     console.log(1);
     console.log(2);">
   </body>
