@@ -19,7 +19,7 @@ class problem:
         self.Z_matrix = torch.zeros(*list(self.b_vector.size()))
         self.A_matrix = torch.cat((self.A_matrix,self.I_matrix),1)
         self.C_matrix = torch.cat((self.C_matrix,self.Z_matrix),0)
-        self.trials = list(set([i for i in range(0,*list(self.C_matrix.size()))])-set(self.basis_index))
+        self.trials = list(set([i for i in range(0,*list(self.C_matrix.size()))]))
 
     def solve(self):
         for i in (self.trials):
